@@ -1,0 +1,302 @@
+libs:
+    # openssl110:
+    #     name: openssl
+    #     urls:
+    #         - https://www.openssl.org/source/old/1.1.0/openssl-1.1.0.tar.gz
+    #         - https://www.openssl.org/source/old/1.1.0/openssl-1.1.0a.tar.gz
+    #         - https://www.openssl.org/source/old/1.1.0/openssl-1.1.0b.tar.gz
+    #         - https://www.openssl.org/source/old/1.1.0/openssl-1.1.0c.tar.gz
+    #         - https://www.openssl.org/source/old/1.1.0/openssl-1.1.0d.tar.gz
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+    #     custombuild:
+    #         - call "{vcvarsall}" x86
+    #         - cd "{buildpath}"
+    #         - perl "{extractedpath}/Configure" "--prefix={binpath}" "--openssldir={binpath}" VC-WIN32
+    #         - nmake
+    #         - nmake install
+    #     64bit: false
+
+    # openssl102:
+    #     name: openssl
+    #     urls:
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2a.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2b.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2c.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2d.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2e.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2f.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2g.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2h.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2i.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.2/openssl-1.0.2j.tar.gz
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+    #     custombuild:
+    #         - call "{vcvarsall}" x86
+    #         - xcopy "{extractedpath}" "{buildpath}" /E /Y
+    #         - cd "{buildpath}"
+    #         - perl Configure "--prefix={binpath}" "--openssldir={binpath}" debug-VC-WIN32 "-WX-"
+    #         - call ms\do_nasm
+    #         - nmake -f ms\ntdll.mak
+    #         - nmake -f ms\ntdll.mak install
+    #         - xcopy "{buildpath}\out32dll.dbg\ssleay32.pdb" "{binpath}\bin\" /E /Y
+    #         - xcopy "{buildpath}\out32dll.dbg\openssl.pdb" "{binpath}\bin\" /E /Y
+    #         - xcopy "{buildpath}\out32dll.dbg\libeay32.pdb" "{binpath}\bin\" /E /Y
+    #     64bit: false
+
+    # openssl101:
+    #     name: openssl
+    #     urls: 
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1a.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1b.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1c.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1d.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1e.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1f.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1g.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1h.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1i.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1j.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1k.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1l.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1m.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1n.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1o.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1p.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1q.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1r.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1s.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1t.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.1/openssl-1.0.1u.tar.gz
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+    #     custombuild:
+    #         - call "{vcvarsall}" x86
+    #         - xcopy "{extractedpath}" "{buildpath}" /E /Y
+    #         - cd "{buildpath}"
+    #         - perl Configure "--prefix={binpath}" "--openssldir={binpath}" debug-VC-WIN32 "-WX-" "-D_CRT_SECURE_NO_WARNINGS"
+    #         - perl -i.bak -p -e "s/return\(cflags\);/return(CFLAGS);/g" crypto\cversion.c
+    #         - call ms\do_nasm
+    #         - nmake -f ms\ntdll.mak
+    #         - nmake -f ms\ntdll.mak install
+    #         - xcopy "{buildpath}\out32dll.dbg\ssleay32.pdb" "{binpath}\bin\" /E /Y
+    #         - xcopy "{buildpath}\out32dll.dbg\openssl.pdb" "{binpath}\bin\" /E /Y
+    #         - xcopy "{buildpath}\out32dll.dbg\libeay32.pdb" "{binpath}\bin\" /E /Y
+    #     64bit: false
+
+    # openssl100:
+    #     name: openssl
+    #     urls:
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0.tar.gz
+    #         # openssl 1.0.0a cannot be built in the openssl100 chain, it has a bug in its build env 
+    #         # - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0a.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0b.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0c.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0d.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0e.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0f.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0g.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0h.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0i.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0j.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0k.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0l.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0m.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0n.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0o.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0p.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0q.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0r.tar.gz
+    #         - https://www.openssl.org/source/old/1.0.0/openssl-1.0.0s.tar.gz
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+    #     custombuild:
+    #         - call "{vcvarsall}" x86
+    #         - xcopy "{extractedpath}" "{buildpath}" /E /Y
+    #         - cd "{buildpath}"
+    #         - perl Configure no-asm "--prefix={binpath}" "--openssldir={binpath}" debug-VC-WIN32
+    #         - call ms\do_ms.bat
+    #         - perl -i.bak -p -e "s/\-WX //g;" ms\ntdll.mak
+    #         - perl -i.bak -p -e "s/return\(cflags\);/return(CFLAGS);/g" crypto\cversion.c
+    #         - nmake -f ms\ntdll.mak
+    #         - nmake -f ms\ntdll.mak install
+    #         - xcopy "{buildpath}\out32dll.dbg\ssleay32.pdb" "{binpath}\bin\" /E /Y
+    #         - xcopy "{buildpath}\out32dll.dbg\openssl.pdb" "{binpath}\bin\" /E /Y
+    #         - xcopy "{buildpath}\out32dll.dbg\libeay32.pdb" "{binpath}\bin\" /E /Y
+    #     64bit: false
+
+    # openssl098:
+    #     name: openssl
+    #     urls:
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8a.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8b.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8c.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8d.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8e.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8f.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8g.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8h.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8i.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8j.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8k.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8l.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8m.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8n.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8o.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8p.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8q.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8r.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8s.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8t.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8u.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8v.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8w.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8x.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8y.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8za.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8zb.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8zc.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8zd.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8ze.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8zf.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8zg.tar.gz
+    #         - https://www.openssl.org/source/old/0.9.x/openssl-0.9.8zh.tar.gz
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+    #     custombuild:
+    #         - call "{vcvarsall}" x86
+    #         - xcopy "{extractedpath}" "{buildpath}" /E /Y
+    #         - cd "{buildpath}"
+    #         - perl Configure no-asm "--prefix={binpath}" "--openssldir={binpath}" VC-WIN32
+    #         - call ms\do_ms.bat
+    #         - perl -i.bak -p -e "s/\-WX //g;" ms\ntdll.mak
+    #         - perl -i.bak -p -e "s/\/WX //g;" ms\ntdll.mak
+    #         - perl -i.bak -p -e "s/LFLAGS=(.*)$/LFLAGS=$1 \/debug/g;" ms\ntdll.mak
+    #         - nmake -f ms\ntdll.mak
+    #         - xcopy "{buildpath}\out32dll\ssleay32.*" "{binpath}\bin\" /E /Y
+    #         - xcopy "{buildpath}\out32dll\openssl.*" "{binpath}\bin\" /E /Y
+    #         - xcopy "{buildpath}\out32dll\libeay32.*" "{binpath}\bin\" /E /Y
+    #     64bit: false
+    # libpng:
+    #     url: ftp://ftp.simplesystems.org/pub/png/src/history/libpng16/libpng-{version}.tar.gz
+    #     versions:
+    #         - "1.6.24"
+    #         - "1.6.25"
+    #         - "1.6.26"
+    #         - "1.6.27"
+    #         - "1.6.28"
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+    #     dependencies:
+    #         all:
+    #             zlib: "1.2.11"
+    
+    # zlib12:
+    #     name: zlib
+    #     url: http://zlib.net/fossils/zlib-{version}.tar.gz
+    #     versions: 
+    #         - "1.2.7"
+    #         - "1.2.8"
+    #         - "1.2.9"
+    #         - "1.2.10"
+    #         - "1.2.11"
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+
+    # pcre2:
+    #     url: https://ftp.pcre.org/pub/pcre/pcre2-{version}.tar.gz
+    #     versions:
+    #         - "10.00"
+    #         - "10.10"
+    #         - "10.20"
+    #         - "10.21"
+    #         - "10.22"
+    #         - "10.23"
+    #     filetype: tar.gz
+    #     cmakeflags:
+    #         - PCRE2_BUILD_TESTS=OFF
+    #         - BUILD_SHARED_LIBS=ON
+    #     extracts_to_subfolder: true
+    #     dependencies:
+    #         all:
+    #             bzip2: "1.0.6"
+    #             zlib: "1.2.11"
+    #     customcmake:
+    #         "10.22": pcre2/pcre2-10.22.cmake
+
+    # pcre:
+    #     url: https://ftp.pcre.org/pub/pcre/pcre-{version}.tar.gz
+    #     versions:
+    #         - "8.36"
+    #         - "8.37"
+    #         - "8.38"
+    #         - "8.39"
+    #         - "8.40"
+    #     filetype: tar.gz
+    #     cmakeflags: 
+    #         - PCRE_BUILD_TESTS=OFF
+    #         - BUILD_SHARED_LIBS=ON
+    #     extracts_to_subfolder: true
+    #     dependencies:
+    #         all:
+    #             bzip2: "1.0.6"
+    #             zlib: "1.2.11"
+    #     customcmake:
+    #         "8.40": pcre/pcre-8.40.cmake
+
+    # bzip2:
+    #     url: http://www.bzip.org/{version}/bzip2-{version}.tar.gz
+    #     versions:
+    #         - "1.0.2"
+    #         - "1.0.3"
+    #         - "1.0.4"
+    #         - "1.0.5"
+    #         - "1.0.6"
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+    #     customcmake: 
+    #         all: bzip2/all.cmake
+    # tinyxml2:
+    #     url: https://github.com/leethomason/tinyxml2/archive/{version}.tar.gz
+    #     versions:
+    #         - "4.0.1"
+    #         - "4.0.0"
+    #         - "3.0.0"
+    #         - "2.2.0"
+    #         - "2.1.0"
+    #         - "2.0.2"
+    #         - "2.0.1"
+    #     filetype: tar.gz
+    #     cmakeflags: 
+    #         - BUILD_SHARED_LIBS=ON
+    #     extracts_to_subfolder: true
+
+    # tinyxml:
+    #     urls: 
+    #         - http://downloads.sourceforge.net/project/tinyxml/tinyxml/2.6.2/tinyxml_2_6_2.tar.gz
+    #         - http://downloads.sourceforge.net/project/tinyxml/tinyxml/2.6.1/tinyxml_2_6_1.tar.gz
+    #         - http://downloads.sourceforge.net/project/tinyxml/tinyxml/2.6.0/tinyxml_2_6_0.tar.gz
+    #         - http://downloads.sourceforge.net/project/tinyxml/tinyxml/2.5.3/tinyxml_2_5_3.tar.gz
+    #         - http://downloads.sourceforge.net/project/tinyxml/tinyxml/2.5.2/tinyxml_2_5_2.tar.gz
+    #         - http://downloads.sourceforge.net/project/tinyxml/tinyxml/2.5.1/tinyxml_2_5_1.tar.gz
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+    #     subfolder_needs_rename: true
+    #     customcmake:
+    #         all: tinyxml/all.cmake
+    
+    # xz:
+    #     url: https://downloads.sourceforge.net/project/lzmautils/xz-{version}.tar.gz
+    #     versions:
+    #         - "5.2.3"
+    #         - "5.2.2"
+    #         - "5.2.1"
+    #         - "5.2.0"
+    #     filetype: tar.gz
+    #     extracts_to_subfolder: true
+    #     customcmake:
+    #         all: xz/all.cmake

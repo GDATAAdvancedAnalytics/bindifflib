@@ -1,0 +1,5 @@
+- add more libraries
+- set /INCREMENTA:NO for RelWithDebInfo when using CMake - otherwise there will 
+  be functions like "j__SomeFunc" which are just trampoline functions to the 
+  actual function; should have no impact on the library itself but it would be 
+  nice not to have them around

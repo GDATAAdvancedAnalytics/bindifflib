@@ -1,0 +1,3 @@
+artifactory_path: http://artifactory.example.com/artifactory/repo/
+artifactory_user: user
+artifactory_pass: password
